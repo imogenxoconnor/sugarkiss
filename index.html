@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugar Kiss | Lip Scrub Catalogue</title>
+    <meta
+      name="description"
+      content="Sugar Kiss is an NCEA Level 3 business website for made-to-order sugar lip scrubs in sustainable kraft paper jars."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#catalogue" aria-label="Sugar Kiss home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>
+          <strong>Sugar Kiss</strong>
+          <small>Made-to-order lip scrubs</small>
+        </span>
+      </a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#catalogue">Products</a>
+        <a href="#mission">Mission</a>
+        <a href="#goals">Goals</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#swot">SWOT</a>
+      </nav>
+
+      <a class="cart-link" href="#checkout">
+        Cart
+        <span id="cart-count" aria-live="polite">0</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="intro-section" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">NCEA Level 3 Business Storefront</p>
+          <h1 id="page-title">Sugar lip scrubs made fresh when you order.</h1>
+          <p>
+            Choose your flavour, add it to the cart, and complete a sandbox
+            PayPal checkout for a polished business website demonstration.
+          </p>
+        </div>
+
+        <div class="intro-media" aria-label="Sugar scrub product image">
+          <img
+            src="https://cdn.pixabay.com/photo/2014/11/27/20/52/scrub-548198_1280.jpg"
+            alt="A jar of natural sugar scrub"
+          />
+        </div>
+      </section>
+
+      <section class="store-layout" id="catalogue" aria-label="Sugar Kiss product catalogue">
+        <div class="catalogue-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Our Products</p>
+              <h2>Sugar Lip Scrubs</h2>
+            </div>
+            <p id="product-count">0 flavours</p>
+          </div>
+
+          <p class="catalogue-intro">
+            At Sugar Kiss, we handcraft premium, small-batch lip scrubs designed
+            to give you the perfect pout without chemical overkill. Each scrub
+            is packed in a lightweight GreenWay kraft paper jar that is 100%
+            biodegradable.
+          </p>
+
+          <div class="toolbar" aria-label="Catalogue controls">
+            <label class="search-box">
+              <span>Search</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Try vanilla, coconut, raspberry..."
+                autocomplete="off"
+              />
+            </label>
+
+            <label class="select-box">
+              <span>Sort</span>
+              <select id="sort-select">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: low to high</option>
+                <option value="price-high">Price: high to low</option>
+                <option value="name">Name</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="category-list" id="category-list" aria-label="Flavour filters"></div>
+          <div class="product-grid" id="product-grid"></div>
+        </div>
+
+        <aside class="cart-panel" id="checkout" aria-labelledby="checkout-title">
+          <div class="cart-sticky">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Checkout</p>
+                <h2 id="checkout-title">Your Cart</h2>
+              </div>
+              <button class="ghost-button" id="clear-cart" type="button">Clear</button>
+            </div>
+
+            <div class="cart-items" id="cart-items" aria-live="polite"></div>
+
+            <dl class="totals">
+              <div>
+                <dt>Subtotal</dt>
+                <dd id="subtotal">$0.00</dd>
+              </div>
+              <div>
+                <dt>Delivery</dt>
+                <dd id="shipping">$0.00</dd>
+              </div>
+              <div>
+                <dt>GST included</dt>
+                <dd id="gst">$0.00</dd>
+              </div>
+              <div class="total-row">
+                <dt>Total</dt>
+                <dd id="total">$0.00</dd>
+              </div>
+            </dl>
+
+            <form class="checkout-form" id="checkout-form" novalidate>
+              <h3>Customer Details</h3>
+              <label>
+                Full name
+                <input id="customer-name" name="name" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                Email
+                <input id="customer-email" name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                Delivery address
+                <textarea id="customer-address" name="address" rows="3" required></textarea>
+              </label>
+              <label class="checkbox-row">
+                <input id="terms" name="terms" type="checkbox" required />
+                <span>I understand this is a sandbox demo checkout for a school project.</span>
+              </label>
+            </form>
+
+            <div class="payment-box">
+              <h3>PayPal Payment</h3>
+              <p id="checkout-message">
+                Add a flavour, enter customer details, then use PayPal sandbox checkout.
+              </p>
+              <div id="paypal-button-container"></div>
+              <div class="status-message" id="payment-status" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="info-section split-section" id="mission" aria-labelledby="mission-title">
+        <div>
+          <p class="eyebrow">Our Pūtake & Mission</p>
+          <h2 id="mission-title">Freshness over Foliage</h2>
+        </div>
+
+        <div class="copy-grid">
+          <article>
+            <h3>Pūtake</h3>
+            <p>
+              Our Pūtake is to prove that self-care does not have to come at
+              the expense of the environment. We provide high-quality beauty
+              essentials that honour the earth through sustainable packaging and
+              zero-waste production methods.
+            </p>
+          </article>
+          <article>
+            <h3>Mission</h3>
+            <p>
+              To empower our community to feel confident and cared for through
+              natural, sustainably packaged beauty products. We are committed to
+              transparency, fair team values, and a made-to-order philosophy
+              that guarantees quality and minimises waste.
+            </p>
+          </article>
+          <article>
+            <h3>Innovation Statement</h3>
+            <p>
+              Sugar Kiss reflects sustainability in the products we distribute.
+              Our innovation is choosing eco-friendly packaging and handcrafting
+              each product so we know every ingredient inside.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="info-section" id="goals" aria-labelledby="goals-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Corporate Goals</p>
+            <h2 id="goals-title">SMART Goals</h2>
+          </div>
+        </div>
+
+        <div class="goal-list">
+          <article>
+            <strong>1</strong>
+            <p>
+              Sell 120 units of made-to-order, eco-friendly lip scrubs by 30
+              September through social media marketing and word-of-mouth
+              promotion.
+            </p>
+          </article>
+          <article>
+            <strong>2</strong>
+            <p>
+              Maintain 100% sustainable packaging from launch and throughout
+              business operations to reduce environmental impact.
+            </p>
+          </article>
+          <article>
+            <strong>3</strong>
+            <p>
+              Post at least one promotional post per week on social media for
+              the duration of the business.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="info-section" id="sustainability" aria-labelledby="sustainability-title">
+        <div>
+          <p class="eyebrow">Whakaukangia / Sustainability</p>
+          <h2 id="sustainability-title">People, Planet, Culture, and Growth</h2>
+        </div>
+
+        <div class="business-grid">
+          <article>
+            <h3>Tautīnei / Social Sustainability</h3>
+            <p>
+              Sugar Kiss aims to be kind to people and inclusive for everyone.
+              The team makes sure Alyssa, Tayla, and Immy feel respected and
+              have a fair say in how the business runs.
+            </p>
+          </article>
+          <article>
+            <h3>Kaitiakitanga / Environmental Sustainability</h3>
+            <p>
+              We use GreenWay kraft paper jars because they are biodegradable.
+              Made-to-order production helps avoid expired stock and reduces
+              unnecessary waste.
+            </p>
+          </article>
+          <article>
+            <h3>Whai Rawa / Economic Sustainability</h3>
+            <p>
+              Alyssa tracks cost per unit carefully so Sugar Kiss covers
+              ingredients, jars, and shipping while still making a profit to
+              reinvest into better ingredients and new flavours.
+            </p>
+          </article>
+          <article>
+            <h3>Tikanga / Cultural Sustainability</h3>
+            <p>
+              Sugar Kiss aims to feel local to Aotearoa by practising
+              kaitiakitanga, speaking honestly to the community, and respecting
+              New Zealand's diverse cultures.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="info-section" id="swot" aria-labelledby="swot-title">
+        <div>
+          <p class="eyebrow">SWOT Analysis</p>
+          <h2 id="swot-title">How Sugar Kiss Competes</h2>
+        </div>
+
+        <div class="swot-grid">
+          <article>
+            <h3>Strengths</h3>
+            <p>
+              Sugar Kiss stands out through 100% biodegradable kraft paper jars,
+              fresh handmade production, low-waste operations, and affordable
+              social media marketing that connects with teenagers and young
+              adults.
+            </p>
+          </article>
+          <article>
+            <h3>Weaknesses</h3>
+            <p>
+              Handmade production limits how many units can be made at once.
+              Brand awareness is still new, and the cost per unit may be higher
+              than large companies buying ingredients in bulk.
+            </p>
+          </article>
+          <article>
+            <h3>Opportunities</h3>
+            <p>
+              The natural and sustainable skincare market is growing in New
+              Zealand. Gen Z customers often support small brands that match
+              their values, and social platforms can help Sugar Kiss grow.
+            </p>
+          </article>
+          <article>
+            <h3>Threats</h3>
+            <p>
+              Beauty products are competitive. Bigger brands may adopt
+              sustainable packaging, customers may choose cheaper alternatives,
+              and economic changes can reduce spending on non-essential items.
+            </p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>Sugar Kiss school project storefront. Prices are sample NZD values.</p>
+      <a href="#catalogue">Back to products</a>
+    </footer>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=NZD&components=buttons"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
